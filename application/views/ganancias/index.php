@@ -42,7 +42,6 @@
 				       			</ul>
 				       		</div>
 	       	  		</div>
-	       	  		
 	       			<div class="espacio"></div>
 	       			<!--
 					begin GRILLA PARA AJAX
@@ -50,7 +49,6 @@
 	       			<div id="ajaxGrilla">
 	       				<?
 	       				if(count($ingresos)>0){
-	       					
 	       				?>
 		       				<table class="table table-hover">
 			       				<thead>
