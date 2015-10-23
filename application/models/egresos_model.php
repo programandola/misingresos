@@ -8,6 +8,7 @@ class Egresos_model Extends CI_Model{
 		->select("id_egreso, fecha, concepto, descripcion, egreso")
 		->select("DATE_FORMAT(fecha, '%d-%m-%Y') as fecha", FALSE)
 		->from("egresos")
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->order_by('fecha','desc')
 		->get();
 
@@ -20,6 +21,7 @@ class Egresos_model Extends CI_Model{
 		$query=$this->db
 		->select_sum("egreso")
 		->from("egresos")
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		return $query->row();
@@ -109,6 +111,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-01-01')
 		->where('fecha <=','2015-01-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$enero->row();
@@ -120,6 +123,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-02-01')
 		->where('fecha <=','2015-02-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$febrero->row();
@@ -131,6 +135,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-03-01')
 		->where('fecha <=','2015-03-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$marzo->row();
@@ -142,6 +147,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-04-01')
 		->where('fecha <=','2015-04-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$abril->row();
@@ -153,6 +159,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-05-01')
 		->where('fecha <=','2015-05-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$mayo->row();
@@ -164,6 +171,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-06-01')
 		->where('fecha <=','2015-06-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$junio->row();
@@ -175,6 +183,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-07-01')
 		->where('fecha <=','2015-07-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$julio->row();
@@ -186,6 +195,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-08-01')
 		->where('fecha <=','2015-08-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$agosto->row();
@@ -197,6 +207,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-09-01')
 		->where('fecha <=','2015-09-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$septiembre->row();
@@ -208,6 +219,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-10-01')
 		->where('fecha <=','2015-10-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$octubre->row();
@@ -219,6 +231,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-11-01')
 		->where('fecha <=','2015-11-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$noviembre->row();
@@ -230,6 +243,7 @@ class Egresos_model Extends CI_Model{
 		->from("egresos")
 		->where('fecha >=','2015-12-01')
 		->where('fecha <=','2015-12-31')
+		->where("id_usuario",$this->session->userdata('idUser'))
 		->get();
 
 		$result=$diciembre->row();
