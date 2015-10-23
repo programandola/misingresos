@@ -1,0 +1,64 @@
+[1mdiff --git a/application/controllers/login.php b/application/controllers/login.php[m
+[1mindex 7cc2e54..ae334ed 100755[m
+[1m--- a/application/controllers/login.php[m
+[1m+++ b/application/controllers/login.php[m
+[36m@@ -3,21 +3,29 @@[m
+ class Login extends CI_Controller {[m
+ [m
+ 	public function __construct(){[m
+[32m+[m
+ 		parent::__construct();[m
+[32m+[m[41m		[m
+ 		$this->layout->setLayout('template');[m
+[32m+[m[41m		[m
+ 		if($this->session->userdata('login')){[m
+[32m+[m[41m		[m
+ 			header("Location:".base_url()."home");[m
+[32m+[m[41m		[m
+ 		}[m
+[32m+[m[41m	[m
+ 	}[m
+ [m
+[32m+[m
+ 	public function index(){[m
+[31m-		//$this->load->view('hola');[m
+[31m-                $this->layout->setTitle('Mas viajes, Gestion de Pagos - Login');[m
+[32m+[m[41m		[m
+[32m+[m[32m        $this->layout->setTitle('Mis Ingresos - Login');[m
+ [m
+ 		$this->layout->view('login');[m
+ [m
+ 	}[m
+ [m
+[32m+[m
+ 	public function logea(){[m
+ [m
+ 		//primero debemos validar que el usuario y pass no vengan vacios[m
+[36m@@ -41,6 +49,7 @@[m [mclass Login extends CI_Controller {[m
+ [m
+ 	}[m
+ [m
+[32m+[m
+ 	public function recupera_password(){[m
+ 		//primero validamos que no venga el campo correo vacio[m
+ 		if($_POST["correo"]==""){[m
+[36m@@ -52,17 +61,16 @@[m [mclass Login extends CI_Controller {[m
+ 		}[m
+ [m
+ 		echo "Se envio un email a tu cuenta de correo para restablecer el password";[m
+[32m+[m[41m	[m
+ 	}[m
+ [m
+[32m+[m[41m	[m
+ 	public function salir(){[m
+ [m
+ 		$this->usuarios_model->cerrar_sesion();[m
+ 		[m
+ 	}[m
+ [m
+[31m-[m
+[31m-[m
+[31m-[m
+ }[m
+ [m
+ /* End of file welcome.php */[m
