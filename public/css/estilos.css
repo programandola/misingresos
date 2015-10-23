@@ -1,0 +1,202 @@
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Ruluko-Regular;
+    src: url(../fonts/Ruluko-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url(../fonts/Lato2/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato2/Lato-Bold.ttf);
+}
+
+ *{
+    margin:0;
+    padding:0;
+ }
+
+ a, a:link, a:active, a:hover{
+    text-decoration: none;
+    color:black;
+    font-family: Lato-Light;
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+
+ 
+  
+    h1, h2{
+        font-family: Montserrat-Regular;
+        font-size:21px;
+        padding-bottom: 5px;
+    }
+
+    h4, h3{
+        font-family: Lato-Bold;
+        padding-bottom: 5px;
+    }
+
+    h4{
+        font-size: 18px;
+    }
+
+    p, .p-medium, .p-small{
+        font-family: Lato-Light;
+        font-size: 19px; 
+    }
+
+    .p-medium{
+        font-size: 17px; 
+    }
+
+    .p-small{
+        font-size: 15px; 
+    }
+
+    .section-main{
+        height:auto;
+        width:100%;
+        margin:0 auto;
+        min-height:500px;
+        margin-top:20px;
+    }
+     
+
+.div-cliente, .div-fecha{
+    display: none;
+    padding-top: 15px;
+    width:500px;
+}
+
+.div-cliente ul li, .div-fecha ul li{
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.espacio{
+            height:30px;
+        }
+
+.input-text{
+    border:0;
+    height:40px;
+    width:200px;
+    padding-left: 10px;
+    background: url('../images/fondo-input.png')no-repeat;
+    outline:none;
+    color:gray;
+}
+
+table tr{
+    padding-bottom: 20px;
+}
+
+.footer-p{
+    text-align: center;
+}
+
+    .footer-p p{
+        padding: 10px;
+    }
+
+.ajaxSucess{
+    background-color: #04B431;
+    border-radius: 4px;
+    color: white;
+    width:50%;
+}
+
+.ajaxFail{
+    background-color: red;
+    border-radius: 4px;
+    color: white;
+    font-size: 13px;
+    width:70%;
+}
+
+#ajaxGrilla{
+    border:2px solid #f2f2f2;
+    border-radius: 5px;
+    margin-top:60px;
+    padding: 5px;
+}
+
+#divResultAjaxLogin, #errorCliente, #errorFechas, #ajaxRecuperaPassword{
+    display: none;
+}
+
+#divResultAjaxLogin p{
+    font-family: Lato-Bold;
+    font-size: 13px;
+}
+
+#recupera_password{
+    display:none;
+}
+
+/* estilos clientes */
+.contenedor{
+            background: #f2f2f2;
+            border:1px solid silver;
+            border-radius: 5px;
+            display: none;
+            max-height:115px; 
+            overflow-y: scroll;
+
+        }
+        .contenedor p{
+            padding: 0px;
+            padding-left:10px;
+            margin: 0px;
+        }
+        .contenedor a{
+            display: block;
+
+        }
+
+        .contenedor a:hover{
+            text-decoration: none;
+        }
+
+        .contenedor p:hover{
+            cursor:pointer;
+            background-color: #D8D8D8;
+        }
+
+.div-success{
+    border:1px solid #f2f2f2; 
+    background-color:#f2f2f2; 
+    border-radius:5px; 
+    display: none;
+    padding:2px;
+    text-align: center;
+    width:400px;
+}
+#ajaxFail{
+    display: none;
+}
+
+.input-view-pagos{
+    border:0;
+    background: none;
+    height:30px;
+    font-family: Lato-Light;
+}
+
+.div-hide{
+    display:none;
+}
