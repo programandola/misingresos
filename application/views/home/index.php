@@ -15,7 +15,7 @@ $(document).ready(function(){
             type: 'column'
         },
         title: {
-            text: 'Ingresos, Egresos y Ganancias programando laweb'
+            text: 'Ingresos, Egresos y Ganancias'
         },
         subtitle: {
             text: 'Año 2015'
