@@ -3,20 +3,28 @@
 class Login extends CI_Controller {
 
 	public function __construct(){
+
 		parent::__construct();
+		
 		$this->layout->setLayout('template');
+		
 		if($this->session->userdata('login')){
+		
 			header("Location:".base_url()."home");
+		
 		}
+	
 	}
 
+
 	public function index(){
-		//$this->load->view('hola');
-                $this->layout->setTitle('Mas viajes, Gestion de Pagos - Login');
+		
+        $this->layout->setTitle('Mis Ingresos - Login');
 
 		$this->layout->view('login');
 
 	}
+
 
 	public function logea(){
 
@@ -41,6 +49,7 @@ class Login extends CI_Controller {
 
 	}
 
+
 	public function recupera_password(){
 		//primero validamos que no venga el campo correo vacio
 		if($_POST["correo"]==""){
@@ -52,16 +61,15 @@ class Login extends CI_Controller {
 		}
 
 		echo "Se envio un email a tu cuenta de correo para restablecer el password";
+	
 	}
 
+	
 	public function salir(){
 
 		$this->usuarios_model->cerrar_sesion();
 		
 	}
-
-
-
 
 }
 
