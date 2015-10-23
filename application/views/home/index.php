@@ -1,7 +1,6 @@
 <!DOCTYPE html> 
 <html>
 <head>
-<title>jQuery Ajax Example with JSON Response</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){

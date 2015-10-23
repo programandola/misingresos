@@ -26,7 +26,7 @@
 			       			<ul>
 			       				<li>Desde <input type="date" onchange="esconde_div('#errorFechas')" style="width:140px" id="fechaDe" class="form-control"></li>
 			       				<li>Hasta <input type="date" onchange="esconde_div('#errorFechas')" style="width:140px" id="fechaA" class="form-control"></li>
-			       				<li><input type="button" value="Buscar" onclick="return search_ingresos_fecha('<? echo base_url() ?>home/get_ingresos_fechas');" class="btn btn-success"></li>
+			       				<li><input type="button" value="Buscar" onclick="return search_ingresos_fecha('<? echo base_url() ?>ingresos/get_ingresos_fechas');" class="btn btn-success"></li>
 			       				<li><input type="button" value="Cancelar" class="btn btn-warning" onclick="home();"></li>
 			       			</ul>
 			       		</div>

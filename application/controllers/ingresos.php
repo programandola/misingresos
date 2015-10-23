@@ -3,15 +3,18 @@
 class Ingresos extends CI_Controller {
 
 	public function __construct(){
+		
 		parent::__construct();
 		$this->layout->setLayout('template');
 		if(!$this->session->userdata('login')){
 			header("Location:".base_url());
 		}
+
 	}
 
 	public function index(){
-		//$this->load->view('hola');
+
+		$this->layout->setTitle('Mis Ingresos - Ingresos');
 		$ingresos=$this->ingresos_model->ingresos();
 		$sumaingresos=$this->ingresos_model->get_all_ingresos();
 		$this->layout->view('index', compact('ingresos', 'sumaingresos'));
